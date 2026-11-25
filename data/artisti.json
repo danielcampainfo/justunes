@@ -1,0 +1,80 @@
+[
+ {
+  "id": "a_maneskin",
+  "nome": "Måneskin",
+  "paese": "Italia",
+  "bio": "Band rock italiana nata a Roma."
+ },
+ {
+  "id": "a_cheatham",
+  "nome": "Oliver Cheatham",
+  "paese": "Stati Uniti",
+  "bio": "Cantante R&B statunitense, noto per il brano \"Get Down Saturday Night\" (1983)."
+ },
+ {
+  "id": "a_anotr",
+  "nome": "ANOTR",
+  "paese": "Paesi Bassi",
+  "bio": "Duo olandese di musica house formato da Jesse van der Heijden e Oguzhan Guney."
+ },
+ {
+  "id": "a_chaney",
+  "nome": "CHANEY",
+  "paese": "Regno Unito",
+  "bio": "Produttore e DJ house britannico di Swindon."
+ },
+ {
+  "id": "a_disclosure",
+  "nome": "Disclosure",
+  "paese": "Regno Unito",
+  "bio": "Duo elettronico britannico formato dai fratelli Guy e Howard Lawrence."
+ },
+ {
+  "id": "a_fodera",
+  "nome": "Sonny Fodera, Jazzy & D.O.D",
+  "paese": "",
+  "bio": "Collaborazione tra il DJ australiano Sonny Fodera, la cantante irlandese Jazzy e il DJ britannico D.O.D."
+ },
+ {
+  "id": "a_blondish",
+  "nome": "BLOND:ISH & Stevie Appleton",
+  "paese": "",
+  "bio": "Collaborazione tra la produttrice BLOND:ISH e Stevie Appleton."
+ },
+ {
+  "id": "a_lfsystem",
+  "nome": "LF SYSTEM",
+  "paese": "Scozia",
+  "bio": "Duo scozzese di musica house."
+ },
+ {
+  "id": "a_oden",
+  "nome": "Oden & Fatzo",
+  "paese": "Francia",
+  "bio": "Trio house di Parigi, formato dal duo di produttori Oden e dal DJ Fatzo."
+ },
+ {
+  "id": "a_braxton",
+  "nome": "Toni Braxton",
+  "paese": "Stati Uniti",
+  "bio": "Cantautrice e attrice statunitense."
+ },
+ {
+  "id": "a_tyla",
+  "nome": "Tyla",
+  "paese": "Sudafrica",
+  "bio": "Cantante sudafricana, tra le voci del genere \"popiano\"."
+ },
+ {
+  "id": "a_winans",
+  "nome": "Mario Winans",
+  "paese": "Stati Uniti",
+  "bio": "Cantante R&B statunitense della famiglia Winans."
+ },
+ {
+  "id": "ignoto",
+  "nome": "Artista da verificare",
+  "paese": "",
+  "bio": "Brani di cui l'artista non è ancora stato confermato."
+ }
+]

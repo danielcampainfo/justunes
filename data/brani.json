@@ -1,0 +1,165 @@
+[
+ {
+  "id": "b01",
+  "titolo": "All Mine",
+  "artista_id": "ignoto",
+  "file": "audio/All_Mine.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b02",
+  "titolo": "Beggin'",
+  "artista_id": "a_maneskin",
+  "file": "audio/Beggin'.mp3",
+  "copertina": "",
+  "genere": "Rock",
+  "anno": 2017
+ },
+ {
+  "id": "b03",
+  "titolo": "Check Out",
+  "artista_id": "ignoto",
+  "file": "audio/Check_Out.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b04",
+  "titolo": "Get Down Saturday Night",
+  "artista_id": "a_cheatham",
+  "file": "audio/Get_Down_Saturday_Night.mp3",
+  "copertina": "",
+  "genere": "Funk",
+  "anno": 1983
+ },
+ {
+  "id": "b05",
+  "titolo": "How You Feel",
+  "artista_id": "a_anotr",
+  "file": "audio/How_You_Feel.mp3",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2024
+ },
+ {
+  "id": "b06",
+  "titolo": "I Choose You",
+  "artista_id": "a_chaney",
+  "file": "audio/I_Choose_You.mp3",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2024
+ },
+ {
+  "id": "b07",
+  "titolo": "Move Your Body",
+  "artista_id": "ignoto",
+  "file": "audio/Move_Your_Body.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b08",
+  "titolo": "Never Walk Alone",
+  "artista_id": "a_blondish",
+  "file": "audio/Never_Walk_Alone.mp3",
+  "copertina": "",
+  "genere": "Indie dance",
+  "anno": 2024
+ },
+ {
+  "id": "b09",
+  "titolo": "Too Cool To Be Careless",
+  "artista_id": "ignoto",
+  "file": "audio/TOO_COOL_TO_BE_CARELESS.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b10",
+  "titolo": "Water",
+  "artista_id": "a_tyla",
+  "file": "audio/Water.mp3",
+  "copertina": "",
+  "genere": "Pop",
+  "anno": 2023
+ },
+ {
+  "id": "b11",
+  "titolo": "Afraid To Feel",
+  "artista_id": "a_lfsystem",
+  "file": "audio/Afraid_To_Feel.mp3",
+  "copertina": "",
+  "genere": "House"
+ },
+ {
+  "id": "b12",
+  "titolo": "Heartbeat",
+  "artista_id": "ignoto",
+  "file": "audio/Heartbeat.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b13",
+  "titolo": "I Don't Wanna Know",
+  "artista_id": "a_winans",
+  "file": "audio/I_Don't_Wanna_Know.mp3",
+  "copertina": "",
+  "genere": "R&B",
+  "anno": 2004
+ },
+ {
+  "id": "b14",
+  "titolo": "places to be",
+  "artista_id": "ignoto",
+  "file": "audio/places_to_be.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b15",
+  "titolo": "Remember",
+  "artista_id": "ignoto",
+  "file": "audio/Remember.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b16",
+  "titolo": "She's Gone, Dance On",
+  "artista_id": "a_disclosure",
+  "file": "audio/She's_Gone,_Dance_On.mp3",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2024
+ },
+ {
+  "id": "b17",
+  "titolo": "Somedays",
+  "artista_id": "a_fodera",
+  "file": "audio/Somedays.mp3",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2024
+ },
+ {
+  "id": "b18",
+  "titolo": "Complicate It",
+  "artista_id": "ignoto",
+  "file": "audio/Complicate_It.mp3",
+  "copertina": ""
+ },
+ {
+  "id": "b19",
+  "titolo": "Lauren",
+  "artista_id": "a_oden",
+  "file": "audio/Oden_&_Fatzo_-_Lauren_(Official_Video).mp3",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2021
+ },
+ {
+  "id": "b20",
+  "titolo": "You're Makin' Me High",
+  "artista_id": "a_braxton",
+  "file": "audio/You're_Makin'_Me_High.mp3",
+  "copertina": "",
+  "genere": "R&B",
+  "anno": 1996
+ }
+]

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>JusTunes</title>
+  <meta name="description" content="JusTunes: piattaforma di streaming di canzoni in stile vintage.">
+  <meta name="theme-color" content="#140c07">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="img/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- Colonna sinistra -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="panel side-nav" aria-label="Navigazione principale">
+        <a class="brand" href="#/" aria-label="JusTunes, home"><span class="brand-disc" aria-hidden="true"></span><span>Jus<b>Tunes</b></span></a>
+        <a class="nav-link" href="#/" data-nav="home" id="navHome"></a>
+        <a class="nav-link" href="#/cerca" data-nav="cerca" id="navSearch"></a>
+      </nav>
+      <section class="panel library" aria-label="La tua libreria">
+        <div class="lib-head" id="libHead"></div>
+        <div class="chips" id="libChips"></div>
+        <div class="lib-list" id="libList"></div>
+      </section>
+    </aside>
+
+    <!-- Contenuto -->
+    <main class="main" id="main" tabindex="-1">
+      <header class="main-head" id="mainHead">
+        <button class="round-btn" id="btnBack" aria-label="Indietro"></button>
+        <button class="round-btn" id="btnFwd" aria-label="Avanti"></button>
+        <form class="search" id="searchForm" role="search">
+          <span id="searchIcon"></span>
+          <input id="searchInput" type="search" placeholder="Cosa vuoi ascoltare?" aria-label="Cerca" autocomplete="off">
+        </form>
+        <button class="btn-install" id="installBtn" hidden>Installa app</button>
+      </header>
+      <div class="view" id="view"></div>
+    </main>
+
+    <!-- Colonna destra -->
+    <aside class="panel rightpanel" id="rightPanel" aria-label="Dettagli"></aside>
+
+    <!-- Barra player -->
+    <footer class="panel bar" id="bar" hidden>
+      <button class="bar-left" id="barOpen" aria-label="Apri il giradischi">
+        <span class="cov bar-cover" id="barCover"></span>
+        <span class="bar-text"><strong id="barTitle"></strong><small id="barArtist"></small></span>
+      </button>
+      <div class="bar-center">
+        <div class="bar-btns">
+          <button class="ibtn" id="barPrev" aria-label="Brano precedente"></button>
+          <button class="ibtn main-play" id="barPlay" aria-label="Riproduci / Pausa"></button>
+          <button class="ibtn" id="barNext" aria-label="Brano successivo"></button>
+        </div>
+        <div class="bar-seek">
+          <span id="barCur">0:00</span>
+          <input type="range" id="barSeek" min="0" max="1000" value="0" aria-label="Posizione nel brano">
+          <span id="barDur">0:00</span>
+        </div>
+      </div>
+      <div class="bar-right">
+        <span id="volIcon"></span>
+        <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+      </div>
+    </footer>
+
+    <!-- Tab bar (solo telefono) -->
+    <nav class="tabbar" id="tabbar" aria-label="Navigazione">
+      <a class="tab" href="#/" data-nav="home" id="tabHome"></a>
+      <a class="tab" href="#/cerca" data-nav="cerca" id="tabSearch"></a>
+      <a class="tab" href="#/libreria" data-nav="libreria" id="tabLib"></a>
+    </nav>
+  </div>
+
+  <!-- Schermata brano a tutto schermo -->
+  <section class="full" id="full" hidden aria-label="Ora in riproduzione">
+    <header class="full-head">
+      <button class="full-close" id="fullClose" aria-label="Chiudi"></button>
+      <span class="full-from" id="fullFrom"></span>
+      <span style="width:56px"></span>
+    </header>
+    <div class="full-body">
+      <div class="record"><div class="vinyl"><div class="label" id="fullLabel"></div></div></div>
+      <div class="titles"><h2 id="fullTitle"></h2><a id="fullArtist" href="#/"></a></div>
+      <div class="full-seek">
+        <input type="range" id="fullSeek" min="0" max="1000" value="0" aria-label="Posizione nel brano">
+        <div class="times"><span id="fullCur">0:00</span><span id="fullLeft">-0:00</span></div>
+      </div>
+      <div class="full-ctrls">
+        <button class="pill" id="fullPrev" aria-label="Brano precedente"></button>
+        <button class="big-play" id="fullPlay" aria-label="Riproduci / Pausa"></button>
+        <button class="pill" id="fullNext" aria-label="Brano successivo"></button>
+      </div>
+      <p class="sim-note" id="simNote" hidden>File audio non trovato: riproduzione simulata.</p>
+    </div>
+  </section>
+
+  <audio id="audio" preload="none"></audio>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ===== Base: variabili (palette), reset, tipografia ===== */
+:root{
+  /* Palette scelta */
+  --almond-cream:#ede0d4;
+  --pale-oak:#e6ccb2;
+  --tan:#ddb892;
+  --faded-copper:#b08968;
+  --coffee-bean:#7f5539;
+  --toffee-brown:#9c6644;
+
+  /* Toni scuri ricavati dal coffee bean (sfondi della home) */
+  --bg:#140c07;
+  --panel:#1f130c;
+  --panel-2:#2b1b11;
+  --line:#3a2619;
+  --ink:#24160d;          /* testo scuro sulle superfici chiare */
+  --hero:#5a3a26;         /* inizio sfumatura in alto nella home */
+
+  --text:var(--almond-cream);
+  --muted:var(--faded-copper);
+  --accent:var(--tan);
+
+  --font-display:"Playfair Display","Didot","Bodoni MT",Georgia,"Times New Roman",serif;
+  --font-body:"Inter","Helvetica Neue","Segoe UI",system-ui,-apple-system,sans-serif;
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--text);font-family:var(--font-body);
+  font-size:15px;line-height:1.4;-webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input{font:inherit;color:inherit}
+svg{display:block;fill:currentColor}
+svg.stroke{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.1}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* scrollbar discreta */
+*{scrollbar-width:thin;scrollbar-color:#4a3120 transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#4a3120;border-radius:8px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
