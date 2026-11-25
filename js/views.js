@@ -33,7 +33,7 @@ export function artista(id) {
   const l = braniDi(a);
   return `<div class="detail round">${cover(a, "artista")}
       <div><p class="eyebrow">Artista${a[A.paese] ? " · " + esc(a[A.paese]) : ""}</p><h1>${esc(a[A.nome])}</h1><p>${esc(a[A.bio] || "")}</p></div></div>
-    ${l.length ? `<div class="actions"><button class="fab" data-playall="artista:${esc(a[A.id])}" aria-label="Riproduci tutto">${icon("play")}</button></div>` : ""}
+    ${l.length ? `<div class="actions"><button class="fab" data-playall="artista:${esc(a[A.id])}" aria-label="Riproduci tutto"><span class="fab-icon">${icon("play")}</span><span class="fab-label">Riproduci tutto</span></button></div>` : ""}
     <section><div class="section-head"><h2>Brani</h2></div>${trackList(l, "artista:" + a[A.id])}</section>`;
 }
 
@@ -44,7 +44,7 @@ export function playlist(id) {
   const l = braniPlaylist(p);
   return `<div class="detail">${cover(p, "playlist")}
       <div><p class="eyebrow">Playlist</p><h1>${esc(p[P.nome])}</h1><p>${esc(p[P.descrizione] || "")}</p></div></div>
-    ${l.length ? `<div class="actions"><button class="fab" data-playall="playlist:${esc(p[P.id])}" aria-label="Riproduci tutto">${icon("play")}</button></div>` : ""}
+    ${l.length ? `<div class="actions"><button class="fab" data-playall="playlist:${esc(p[P.id])}" aria-label="Riproduci tutto"><span class="fab-icon">${icon("play")}</span><span class="fab-label">Riproduci tutto</span></button></div>` : ""}
     <section>${trackList(l, "playlist:" + p[P.id])}</section>`;
 }
 
