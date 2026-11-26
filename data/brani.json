@@ -161,5 +161,266 @@
   "copertina": "",
   "genere": "R&B",
   "anno": 1996
+ },
+ {
+  "id": "s01",
+  "titolo": "Your Love Is King",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1984
+ },
+ {
+  "id": "s02",
+  "titolo": "Hang On to Your Love",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1984
+ },
+ {
+  "id": "s03",
+  "titolo": "Smooth Operator",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1984
+ },
+ {
+  "id": "s04",
+  "titolo": "Jezebel",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1985
+ },
+ {
+  "id": "s05",
+  "titolo": "The Sweetest Taboo",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1985
+ },
+ {
+  "id": "s06",
+  "titolo": "Is It a Crime",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1985
+ },
+ {
+  "id": "s07",
+  "titolo": "Never as Good as the First Time",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1986
+ },
+ {
+  "id": "s08",
+  "titolo": "Love Is Stronger Than Pride",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1988
+ },
+ {
+  "id": "s09",
+  "titolo": "Paradise",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1988
+ },
+ {
+  "id": "s10",
+  "titolo": "Nothing Can Come Between Us",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1988
+ },
+ {
+  "id": "s11",
+  "titolo": "No Ordinary Love",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1992
+ },
+ {
+  "id": "s12",
+  "titolo": "Like a Tattoo",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1992
+ },
+ {
+  "id": "s13",
+  "titolo": "Kiss of Life",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1992
+ },
+ {
+  "id": "s14",
+  "titolo": "Please Send Me Someone to Love",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1994
+ },
+ {
+  "id": "s15",
+  "titolo": "Cherish the Day",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1993
+ },
+ {
+  "id": "s16",
+  "titolo": "Pearls",
+  "artista_id": "a_sade",
+  "file": "",
+  "copertina": "",
+  "genere": "Soul",
+  "anno": 1992
+ },
+ {
+  "id": "h01",
+  "titolo": "Your Love",
+  "artista_id": "a_knuckles",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1987
+ },
+ {
+  "id": "h02",
+  "titolo": "The Whistle Song",
+  "artista_id": "a_knuckles",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1991
+ },
+ {
+  "id": "h03",
+  "titolo": "Show Me Love",
+  "artista_id": "a_robins",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1993
+ },
+ {
+  "id": "h04",
+  "titolo": "French Kiss",
+  "artista_id": "a_lillouis",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1989
+ },
+ {
+  "id": "h05",
+  "titolo": "Around the World",
+  "artista_id": "a_daft",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1997
+ },
+ {
+  "id": "h06",
+  "titolo": "Big Fun",
+  "artista_id": "a_innercity",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1988
+ },
+ {
+  "id": "h07",
+  "titolo": "Finally",
+  "artista_id": "a_cece",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1991
+ },
+ {
+  "id": "h08",
+  "titolo": "Gypsy Woman",
+  "artista_id": "a_crystal",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1991
+ },
+ {
+  "id": "h09",
+  "titolo": "Move Your Body (The House Music Anthem)",
+  "artista_id": "a_mjeff",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1986
+ },
+ {
+  "id": "h10",
+  "titolo": "Promised Land",
+  "artista_id": "a_joesmooth",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1987
+ },
+ {
+  "id": "h11",
+  "titolo": "La La Land",
+  "artista_id": "a_velvet",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2001
+ },
+ {
+  "id": "h12",
+  "titolo": "The Ha Dance",
+  "artista_id": "a_maw",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 1991
+ },
+ {
+  "id": "h13",
+  "titolo": "Don't You Want My Love",
+  "artista_id": "a_moody",
+  "file": "",
+  "copertina": "",
+  "genere": "House",
+  "anno": 2000
  }
 ]

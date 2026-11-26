@@ -1,259 +1,65 @@
 /* ===== Pulsanti: stile "hi-fi anni '80" (tasti in rilievo con ombra piena) ===== */
-:root {
-  --key-edge: #4a2f1d
-}
-
-.fab,
-.ibtn.main-play,
-.mp3-btn.key,
-.chip,
-.btn-install,
-.round-btn {
-  border: 2px solid var(--key-edge);
-  border-radius: 12px;
-  background: linear-gradient(180deg, var(--pale-oak), var(--tan));
-  color: var(--ink);
-  box-shadow: 0 4px 0 var(--key-edge);
-  transition: transform .08s, box-shadow .08s, filter .15s
-}
-
-.fab:hover,
-.ibtn.main-play:hover,
-.mp3-btn.key:hover,
-.chip:hover,
-.btn-install:hover,
-.round-btn:hover {
-  transform: none;
-  filter: brightness(1.07);
-  background: linear-gradient(180deg, var(--pale-oak), var(--tan))
-}
-
-.fab:active,
-.ibtn.main-play:active,
-.mp3-btn.key:active,
-.chip:active,
-.btn-install:active,
-.round-btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 var(--key-edge)
-}
-
-.fab {
-  width: 60px;
-  height: 52px
-}
-
-.ibtn.main-play {
-  width: 48px;
-  height: 40px;
-  border-radius: 10px
-}
-
-.chip {
-  border-radius: 8px;
-  padding: 5px 12px;
-  box-shadow: 0 3px 0 var(--key-edge);
-  background: linear-gradient(180deg, var(--faded-copper), var(--coffee-bean));
-  color: var(--almond-cream)
-}
-
-.chip:hover {
-  background: linear-gradient(180deg, var(--faded-copper), var(--coffee-bean))
-}
-
-.chip.active {
-  background: linear-gradient(180deg, var(--pale-oak), var(--tan));
-  color: var(--ink)
-}
-
-.btn-install {
-  border-radius: 10px;
-  font-size: .8rem;
-  letter-spacing: .04em;
-  text-transform: uppercase
-}
-
-.round-btn {
-  width: 36px;
-  height: 32px;
-  border-radius: 9px;
-  background: linear-gradient(180deg, var(--faded-copper), var(--coffee-bean));
-  color: var(--almond-cream);
-  box-shadow: 0 3px 0 var(--key-edge)
-}
-
-.round-btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 var(--key-edge)
-}
-
-.ibtn {
-  border-radius: 9px
-}
-
-.ibtn:hover {
-  background: #ede0d41a
-}
+:root{--key-edge:#4a2f1d}
+.fab,.ibtn.main-play,.mp3-btn.key,.chip,.btn-install,.round-btn{
+  border:2px solid var(--key-edge);border-radius:12px;
+  background:linear-gradient(180deg,var(--pale-oak),var(--tan));color:var(--ink);
+  box-shadow:0 4px 0 var(--key-edge);transition:transform .08s,box-shadow .08s,filter .15s}
+.fab:hover,.ibtn.main-play:hover,.mp3-btn.key:hover,.chip:hover,.btn-install:hover,.round-btn:hover{transform:none;filter:brightness(1.07);background:linear-gradient(180deg,var(--pale-oak),var(--tan))}
+.fab:active,.ibtn.main-play:active,.mp3-btn.key:active,.chip:active,.btn-install:active,.round-btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--key-edge)}
+.fab{width:60px;height:52px}
+.ibtn.main-play{width:48px;height:40px;border-radius:10px}
+.chip{border-radius:8px;padding:5px 12px;box-shadow:0 3px 0 var(--key-edge);background:linear-gradient(180deg,var(--faded-copper),var(--coffee-bean));color:var(--almond-cream)}
+.chip:hover{background:linear-gradient(180deg,var(--faded-copper),var(--coffee-bean))}
+.chip.active{background:linear-gradient(180deg,var(--pale-oak),var(--tan));color:var(--ink)}
+.btn-install{border-radius:10px;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.round-btn{width:36px;height:32px;border-radius:9px;background:linear-gradient(180deg,var(--faded-copper),var(--coffee-bean));color:var(--almond-cream);box-shadow:0 3px 0 var(--key-edge)}
+.round-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--key-edge)}
+.ibtn{border-radius:9px}
+.ibtn:hover{background:#ede0d41a}
 
 /* ===== Lettore mp3 nel pannello destro ===== */
-.mp3 {
-  flex: none;
-  position: relative;
-  overflow: hidden;
-  border-radius: 26px;
-  padding: 20px 18px 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
-  background: radial-gradient(120% 80% at 50% 0%, #5a3a26 0%, #2b1b11 55%, #170e08 100%);
-  border: 1px solid var(--line);
-  box-shadow: inset 0 1px 0 #ede0d41f, 0 12px 30px #0008
-}
-
-.mp3-stars {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: .7;
-  background-image: radial-gradient(1.5px 1.5px at 12% 18%, #ede0d4, transparent), radial-gradient(1px 1px at 78% 12%, #ede0d4, transparent),
-    radial-gradient(1.5px 1.5px at 88% 46%, #e6ccb2, transparent), radial-gradient(1px 1px at 20% 62%, #e6ccb2, transparent),
-    radial-gradient(1px 1px at 62% 74%, #ede0d4, transparent), radial-gradient(1.5px 1.5px at 40% 90%, #ddb892, transparent),
-    radial-gradient(1px 1px at 92% 84%, #ede0d4, transparent), radial-gradient(1px 1px at 6% 88%, #ddb892, transparent)
-}
-
-.mp3>* {
-  position: relative
-}
-
-.mp3-cover {
-  width: 78%;
-  height: auto;
-  flex: none;
-  aspect-ratio: 1/1;
-  border-radius: 18px;
-  border: 3px solid #ede0d433;
-  box-shadow: 0 10px 24px #000a;
-  font-size: 3rem
-}
-
-.mp3-empty {
-  background: var(--panel-2);
-  color: var(--muted)
-}
-
-.mp3-empty svg {
-  width: 46px;
-  height: 46px
-}
-
-.mp3-text h3 {
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  line-height: 1.1;
-  margin: 0
-}
-
-.mp3-text p {
-  color: var(--tan);
-  margin: 4px 0 0
-}
-
-.mp3-ctl {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px
-}
-
-.mp3-btn {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  color: var(--almond-cream);
-  border-radius: 10px
-}
-
-.mp3-btn svg {
-  width: 20px;
-  height: 20px
-}
-
-.mp3-btn.small {
-  color: var(--muted);
-  width: 30px
-}
-
-.mp3-btn.small svg {
-  width: 17px;
-  height: 17px
-}
-
-.mp3-btn.small.on {
-  color: var(--tan);
-  box-shadow: 0 2px 0 var(--tan)
-}
-
-.mp3-btn:not(.key):hover {
-  background: #ede0d41a
-}
-
-.mp3-btn.key {
-  width: 56px;
-  height: 50px;
-  border-radius: 14px
-}
-
-.mp3-btn.key svg {
-  width: 26px;
-  height: 26px
-}
+.mp3{flex:none;position:relative;overflow:hidden;border-radius:26px;padding:20px 18px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,#5a3a26 0%,#2b1b11 55%,#170e08 100%);border:1px solid var(--line);
+  box-shadow:inset 0 1px 0 #ede0d41f,0 12px 30px #0008}
+.mp3-stars{position:absolute;inset:0;pointer-events:none;opacity:.7;
+  background-image:radial-gradient(1.5px 1.5px at 12% 18%,#ede0d4,transparent),radial-gradient(1px 1px at 78% 12%,#ede0d4,transparent),
+  radial-gradient(1.5px 1.5px at 88% 46%,#e6ccb2,transparent),radial-gradient(1px 1px at 20% 62%,#e6ccb2,transparent),
+  radial-gradient(1px 1px at 62% 74%,#ede0d4,transparent),radial-gradient(1.5px 1.5px at 40% 90%,#ddb892,transparent),
+  radial-gradient(1px 1px at 92% 84%,#ede0d4,transparent),radial-gradient(1px 1px at 6% 88%,#ddb892,transparent)}
+.mp3>*{position:relative}
+.mp3-cover{width:78%;height:auto;flex:none;aspect-ratio:1/1;border-radius:18px;border:3px solid #ede0d433;box-shadow:0 10px 24px #000a;font-size:3rem}
+.mp3-empty{background:var(--panel-2);color:var(--muted)}
+.mp3-empty svg{width:46px;height:46px}
+.mp3-text h3{font-family:var(--font-display);font-size:1.45rem;line-height:1.1;margin:0}
+.mp3-text p{color:var(--tan);margin:4px 0 0}
+.mp3-ctl{display:flex;align-items:center;justify-content:center;gap:10px}
+.mp3-btn{width:38px;height:38px;display:grid;place-items:center;color:var(--almond-cream);border-radius:10px}
+.mp3-btn svg{width:20px;height:20px}
+.mp3-btn.small{color:var(--muted);width:30px}
+.mp3-btn.small svg{width:17px;height:17px}
+.mp3-btn.small.on{color:var(--tan);box-shadow:0 2px 0 var(--tan)}
+.mp3-btn:not(.key):hover{background:#ede0d41a}
+.mp3-btn.key{width:56px;height:50px;border-radius:14px}
+.mp3-btn.key svg{width:26px;height:26px}
 
 /* brani senza file audio e messaggio */
-.track.no-audio {
-  opacity: .6
-}
+.track.no-audio{opacity:.6}
+.tag-off{font-style:normal;font-size:.65rem;margin-left:8px;padding:1px 6px;border:1px solid var(--faded-copper);border-radius:5px;color:var(--faded-copper);text-transform:uppercase;letter-spacing:.04em;font-weight:600;vertical-align:middle}
+.toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,20px);max-width:min(92vw,460px);padding:12px 16px;border-radius:10px;
+  background:var(--almond-cream);color:var(--ink);border:2px solid var(--key-edge);box-shadow:0 4px 0 var(--key-edge);font-size:.9rem;z-index:80;opacity:0;pointer-events:none;transition:.25s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.rp-about{flex:none}
 
-.tag-off {
-  font-style: normal;
-  font-size: .65rem;
-  margin-left: 8px;
-  padding: 1px 6px;
-  border: 1px solid var(--faded-copper);
-  border-radius: 5px;
-  color: var(--faded-copper);
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-weight: 600;
-  vertical-align: middle
-}
-
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 110px;
-  transform: translate(-50%, 20px);
-  max-width: min(92vw, 460px);
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: var(--almond-cream);
-  color: var(--ink);
-  border: 2px solid var(--key-edge);
-  box-shadow: 0 4px 0 var(--key-edge);
-  font-size: .9rem;
-  z-index: 80;
-  opacity: 0;
-  pointer-events: none;
-  transition: .25s
-}
-
-.toast.on {
-  opacity: 1;
-  transform: translate(-50%, 0)
-}
-
-.rp-about {
-  flex: none
-}
+/* ===== Preferiti ===== */
+.t-fav,.mp3-fav,.ibtn.fav{display:grid;place-items:center;color:var(--muted);border-radius:8px;transition:color .15s,transform .1s}
+.t-fav{width:30px;height:30px;opacity:0}
+.track:hover .t-fav,.t-fav.on,.t-fav:focus-visible{opacity:1}
+@media (hover:none){.t-fav{opacity:1}}
+.t-fav svg,.mp3-fav svg,.ibtn.fav svg{width:18px;height:18px}
+.t-fav:hover,.mp3-fav:hover,.ibtn.fav:hover{color:var(--almond-cream)}
+.t-fav.on,.mp3-fav.on,.ibtn.fav.on{color:var(--tan)}
+.t-fav:active,.mp3-fav:active{transform:scale(.85)}
+.mp3-text{position:relative;width:100%;padding:0 34px}
+.mp3-fav{position:absolute;right:0;top:2px;width:30px;height:30px}
+.fav-cover{width:min(220px,40vw);aspect-ratio:1;border-radius:10px;background:linear-gradient(135deg,var(--faded-copper),var(--coffee-bean));color:var(--almond-cream);flex:none}
+.fav-cover svg{width:34%;height:34%}

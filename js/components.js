@@ -2,8 +2,9 @@
 import { A, B, P } from "./config.js";
 import { esc, fmt, cssUrl, gradient } from "./utils.js";
 import { icon } from "./icons.js";
-import { artistaDi, braniDi, braniPlaylist } from "./data.js";
+import { artistaDi, braniDi, braniPlaylist, hasAudio } from "./data.js";
 import { coverOfTrack } from "./covers.js";
+import { isFav } from "./store.js";
 
 const enc = encodeURIComponent;
 
@@ -32,22 +33,27 @@ export function coverStyle(item, kind) {
   return m ? m[1] : "";
 }
 
+/** Cuore dei preferiti (aggiornato da main.js con paintFavs) */
+export const favBtn = (b, cls = "t-fav") => { const on = isFav(b[B.id]);
+  return `<button class="${cls}${on ? " on" : ""}" data-act="fav" data-id="${esc(b[B.id])}" aria-label="${on ? "Togli dai preferiti" : "Aggiungi ai preferiti"}" aria-pressed="${on}">${icon(on ? "heartfill" : "heart")}</button>`; };
+
 export function trackRow(b, ctx, n) {
   const a = artistaDi(b);
   const meta = [b[B.genere], b[B.anno]].filter(Boolean).map(esc).join(" · ");
-  return `<article class="track" data-track="${esc(b[B.id])}" data-ctx="${esc(ctx)}">
+  return `<article class="track${hasAudio(b) ? "" : " no-audio"}" data-track="${esc(b[B.id])}" data-ctx="${esc(ctx)}">
     <div class="t-idx"><span class="num">${n}</span><span class="ic-play">${icon("play")}</span><span class="ic-pause">${icon("pause")}</span><span class="eq"><i></i><i></i><i></i></span></div>
     ${cover(b, "brano")}
     <div class="t-main">
-      <div class="t-title">${esc(b[B.titolo])}</div>
+      <div class="t-title">${esc(b[B.titolo])}${hasAudio(b) ? "" : '<em class="tag-off">audio mancante</em>'}</div>
       <div class="t-sub">${a ? `<a href="#/artista/${enc(a[A.id])}">${esc(a[A.nome])}</a>` : "Artista sconosciuto"}${meta ? " · " + meta : ""}</div>
     </div>
+    ${favBtn(b)}
     <span class="t-dur" data-dur="${esc(b[B.id])}">${Number(b[B.durata]) > 0 ? fmt(b[B.durata]) : ""}</span>
   </article>`;
 }
 export function trackList(list, ctx) {
   if (!list.length) return `<div class="empty">Nessun brano.</div>`;
-  return `<div class="tracks"><div class="tracks-head"><span>#</span><span></span><span>Titolo</span><span>Durata</span></div>${list.map((b, i) => trackRow(b, ctx, i + 1)).join("")}</div>`;
+  return `<div class="tracks"><div class="tracks-head"><span>#</span><span></span><span>Titolo</span><span></span><span>Durata</span></div>${list.map((b, i) => trackRow(b, ctx, i + 1)).join("")}</div>`;
 }
 
 export const artistCard = (a) => `<a class="card round" href="#/artista/${enc(a[A.id])}">${cover(a, "artista")}<strong>${esc(a[A.nome])}</strong><small>Artista · ${braniDi(a).length} brani</small></a>`;

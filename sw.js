@@ -1,10 +1,10 @@
 /* Service worker JusTunes: l'app funziona offline dopo la prima visita.
  * Rete prima, cache come riserva. L'audio (richieste "range") passa sempre dalla rete. */
-const VERSION = "justunes-v3";
+const VERSION = "justunes-v5";
 const SHELL = ["./", "index.html", "manifest.json",
-  "css/base.css", "css/layout.css", "css/components.css", "css/player.css", "css/responsive.css",
+  "css/base.css", "css/layout.css", "css/components.css", "css/player.css", "css/buttons.css", "css/responsive.css",
   "js/main.js", "js/config.js", "js/utils.js", "js/icons.js", "js/state.js", "js/data.js",
-  "js/components.js", "js/views.js", "js/player.js", "js/covers.js",
+  "js/components.js", "js/views.js", "js/player.js", "js/covers.js", "js/store.js",
   "data/artisti.json", "data/brani.json", "data/playlist.json",
   "img/icon-192.png", "img/icon-512.png"];
 

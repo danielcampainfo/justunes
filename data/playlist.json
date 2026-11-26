@@ -25,5 +25,54 @@
    "b19",
    "b20"
   ]
+ },
+ {
+  "id": "p2",
+  "nome": "The Best of Sade",
+  "descrizione": "I 16 brani dell'album \"The Best of Sade\".",
+  "brani_ids": [
+   "s01",
+   "s02",
+   "s03",
+   "s04",
+   "s05",
+   "s06",
+   "s07",
+   "s08",
+   "s09",
+   "s10",
+   "s11",
+   "s12",
+   "s13",
+   "s14",
+   "s15",
+   "s16"
+  ]
+ },
+ {
+  "id": "p3",
+  "nome": "House: i migliori del mondo",
+  "descrizione": "Classici della house e i tuoi brani house.",
+  "brani_ids": [
+   "h01",
+   "h02",
+   "h03",
+   "h04",
+   "h05",
+   "h06",
+   "h07",
+   "h08",
+   "h09",
+   "h10",
+   "h11",
+   "h12",
+   "h13",
+   "b05",
+   "b06",
+   "b11",
+   "b16",
+   "b17",
+   "b19"
+  ]
  }
 ]

@@ -34,3 +34,6 @@ export function fillDurations() {
     a.src = src;
   });
 }
+
+/** true se il brano ha un file audio indicato nel JSON */
+export const hasAudio = (b) => !!safeUrl(b[B.file]);

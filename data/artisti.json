@@ -76,5 +76,83 @@
   "nome": "Artista da verificare",
   "paese": "",
   "bio": "Brani di cui l'artista non è ancora stato confermato."
+ },
+ {
+  "id": "a_sade",
+  "nome": "Sade",
+  "paese": "Regno Unito",
+  "bio": "Gruppo britannico di soul e smooth jazz guidato dalla cantante Sade Adu."
+ },
+ {
+  "id": "a_knuckles",
+  "nome": "Frankie Knuckles",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_robins",
+  "nome": "Robin S.",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_lillouis",
+  "nome": "Lil Louis",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_daft",
+  "nome": "Daft Punk",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_innercity",
+  "nome": "Inner City",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_cece",
+  "nome": "CeCe Peniston",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_crystal",
+  "nome": "Crystal Waters",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_mjeff",
+  "nome": "Marshall Jefferson",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_joesmooth",
+  "nome": "Joe Smooth",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_velvet",
+  "nome": "Green Velvet",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_maw",
+  "nome": "Masters at Work",
+  "paese": "",
+  "bio": ""
+ },
+ {
+  "id": "a_moody",
+  "nome": "Moodymann",
+  "paese": "",
+  "bio": ""
  }
 ]

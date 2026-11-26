@@ -4,7 +4,8 @@ import { esc } from "./utils.js";
 import { icon } from "./icons.js";
 import { state } from "./state.js";
 import { DB, artistaById, artistaDi, braniDi, braniPlaylist, playlistById, generi } from "./data.js";
-import { cover, trackList, artistCard, playlistCard, trackCard, tile, libRow } from "./components.js";
+import { favIds } from "./store.js";
+import { cover, favBtn, trackList, artistCard, playlistCard, trackCard, tile, libRow } from "./components.js";
 
 const enc = encodeURIComponent;
 const saluto = () => { const h = new Date().getHours(); return h < 12 ? "Buongiorno" : h < 18 ? "Buon pomeriggio" : "Buonasera"; };
@@ -33,7 +34,7 @@ export function artista(id) {
   const l = braniDi(a);
   return `<div class="detail round">${cover(a, "artista")}
       <div><p class="eyebrow">Artista${a[A.paese] ? " · " + esc(a[A.paese]) : ""}</p><h1>${esc(a[A.nome])}</h1><p>${esc(a[A.bio] || "")}</p></div></div>
-    ${l.length ? `<div class="actions"><button class="fab" data-playall="artista:${esc(a[A.id])}" aria-label="Riproduci tutto"><span class="fab-icon">${icon("play")}</span><span class="fab-label">Riproduci tutto</span></button></div>` : ""}
+    ${l.length ? `<div class="actions"><button class="fab" data-playall="artista:${esc(a[A.id])}" aria-label="Riproduci tutto">${icon("play")}</button></div>` : ""}
     <section><div class="section-head"><h2>Brani</h2></div>${trackList(l, "artista:" + a[A.id])}</section>`;
 }
 
@@ -44,7 +45,7 @@ export function playlist(id) {
   const l = braniPlaylist(p);
   return `<div class="detail">${cover(p, "playlist")}
       <div><p class="eyebrow">Playlist</p><h1>${esc(p[P.nome])}</h1><p>${esc(p[P.descrizione] || "")}</p></div></div>
-    ${l.length ? `<div class="actions"><button class="fab" data-playall="playlist:${esc(p[P.id])}" aria-label="Riproduci tutto"><span class="fab-icon">${icon("play")}</span><span class="fab-label">Riproduci tutto</span></button></div>` : ""}
+    ${l.length ? `<div class="actions"><button class="fab" data-playall="playlist:${esc(p[P.id])}" aria-label="Riproduci tutto">${icon("play")}</button></div>` : ""}
     <section>${trackList(l, "playlist:" + p[P.id])}</section>`;
 }
 
@@ -76,6 +77,14 @@ export function cerca(q) {
 const GBG = ["#7f5539", "#9c6644", "#b08968", "#6b4630", "#8a5a3c", "#a47551"];
 const genreBg = (g) => GBG[[...g].reduce((s, c) => s + c.charCodeAt(0), 0) % GBG.length];
 
+export function preferiti() {
+  const f = favIds(), l = DB.brani.filter(b => f.has(String(b[B.id])));
+  return `<div class="detail"><div class="cov fav-cover">${icon("heartfill")}</div>
+      <div><small>Playlist</small><h1>Brani preferiti</h1><p>${l.length} brani</p></div></div>
+    ${l.length ? `<div class="actions"><button class="fab" data-playall="preferiti" aria-label="Riproduci tutto">${icon("play")}</button></div>
+    <section>${trackList(l, "preferiti")}</section>` : `<div class="empty">Non hai ancora preferiti. Premi il cuore accanto a un brano per aggiungerlo.</div>`}`;
+}
+
 /* Libreria: usata nella sidebar e, su telefono, come pagina #/libreria */
 export function libraryChips() {
   return [["playlist", "Playlist"], ["artisti", "Artisti"], ["brani", "Brani"]]
@@ -94,12 +103,19 @@ export function libreria() {
 export function rightPanel() {
   const b = state.current;
   const a = b ? artistaDi(b) : DB.artisti[0];
-  const head = b
-    ? `<h3 class="rp-title">${esc(b[B.titolo])}</h3>${cover(b, "brano", "rp-cover")}
-       <div class="rp-track"><strong>${esc(b[B.titolo])}</strong><span>${a ? esc(a[A.nome]) : ""}</span></div>`
-    : `<h3 class="rp-title">Scopri JusTunes</h3><p style="color:var(--muted)">Scegli un brano per vederlo qui.</p>`;
+  const rep = state.repeat, on = (x) => x ? " on" : "";
+  const player = `<div class="mp3"><div class="mp3-stars"></div>
+    ${b ? cover(b, "brano", "mp3-cover") : `<div class="cov mp3-cover mp3-empty">${icon("note")}</div>`}
+    <div class="mp3-text">${b ? favBtn(b, "mp3-fav") : ""}<h3>${b ? esc(b[B.titolo]) : "Nessun brano"}</h3><p>${b && a ? esc(a[A.nome]) : "Scegli un brano"}</p></div>
+    <div class="mp3-ctl">
+      <button class="mp3-btn small${on(rep !== "off")}" data-act="repeat" aria-label="Ripeti: ${rep}">${icon(rep === "one" ? "repeat1" : "repeat")}</button>
+      <button class="mp3-btn" data-act="prev" aria-label="Precedente">${icon("prev")}</button>
+      <button class="mp3-btn key main" data-act="toggle" aria-label="Riproduci / Pausa">${icon(state.playing ? "pause" : "play")}</button>
+      <button class="mp3-btn" data-act="next" aria-label="Successivo">${icon("next")}</button>
+      <button class="mp3-btn small${on(state.shuffle)}" data-act="shuffle" aria-label="Casuale">${icon("shuffle")}</button>
+    </div></div>`;
   const about = a ? `<div class="rp-about">${cover(a, "artista", "rp-about-img")}
       <div class="rp-about-body"><div class="rp-label">Informazioni sull'artista</div><h4>${esc(a[A.nome])}</h4>
       <p>${esc(a[A.bio] || "")}</p><p>${braniDi(a).length} brani${a[A.paese] ? " · " + esc(a[A.paese]) : ""}</p></div></div>` : "";
-  return head + about;
+  return player + about;
 }
